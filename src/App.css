@@ -1,0 +1,100 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden; 
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; 
+  font-size: calc(10px + 2vmin);
+}
+
+
+.green {
+  color:#3ba30f;
+}
+
+.mainColor {
+  color:rgb(39, 44, 49);
+}
+
+hr.style-hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-left: 12%;
+}
+
+.navbar-brand {
+  padding:0;
+  margin:0;
+}
+
+.logo {
+  font-size: 40px;
+  padding:none;
+}
+
+.paratrooper {
+  position: absolute;
+  z-index: 999;
+  max-height: 150px;
+  min-width: 20px;
+}
+
+.typed-cursor{
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation: typedjsBlink 0.7s infinite;
+}
+
+@keyframes typedjsBlink{
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+  0% { opacity: 1; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+.typed-fade-out{
+  opacity: 0;
+  transition: opacity .25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
+
+ .centered {
+  min-height: 50%;
+  min-width: 50%;
+  border: thin black solid;
+
+} 
+
+input[type="text"],
+input[type="password"] {
+  border: none;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0em;
+  margin-right: 20%;
+  border-style: thin;
+  border-width: 2px;
+}
+.centered2 {
+  border: thin black solid;
+  /* position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 80%; */
+  
+} 
