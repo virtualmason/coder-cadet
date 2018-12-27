@@ -113,7 +113,7 @@ export default class Login extends React.Component {
                         action="/form"
                         method="post"
                         type="submit"
-                        className="btn btn-success mb-3"
+                        className="btn btn-success"
                       >
                         submit
                       </button>
