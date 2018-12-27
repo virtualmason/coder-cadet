@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Typed from 'typed.js';
+import { Button } from 'reactstrap';
+
 
 class TypedReact extends Component {
   componentDidMount() {
@@ -26,7 +28,6 @@ class TypedReact extends Component {
   render() {
     return (
       <div className="wrap">
-        {/* <h1>Typed.js</h1> */}
         <div className="type-wrap">
           <span
             style={{ whiteSpace: 'pre' }}
@@ -34,7 +35,7 @@ class TypedReact extends Component {
           />
         </div>
         {
-        <button onClick={() => this.typed.reset()}>Reset</button>
+        <Button color="success" onClick={() => this.typed.reset()}>Reset</Button>
         }
       </div>
     );
