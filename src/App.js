@@ -3,6 +3,7 @@ import './App.css';
 import IntroPage from './components/IntroPage.js';
 import AboutPage from './components/AboutPage.js';
 import Login from './components/Login.js'
+import Footer from './components/Footer.js';
 class App extends Component {
   render() {
     return (
@@ -10,6 +11,7 @@ class App extends Component {
         <IntroPage />
         <AboutPage />
         <Login />
+        <Footer />
       </div>
     );
   }
