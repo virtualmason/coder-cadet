@@ -4,7 +4,7 @@ import axios from 'axios';
 
 // import $ from "jquery";
 
-export default class Login extends React.Component {
+export default class Registration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -58,16 +58,16 @@ export default class Login extends React.Component {
                   <div className="form-group ml-3">
                     <Row>
                       <Col>
-                       <h1 className="text-center text-success">{this.state.resp}</h1>
-                      
+                       <h1 className="text-center text-success">{this.state.resp}</h1> 
                       </Col>
-                    </Row>                    
+                    </Row>
+                    
                     <br />
                     <label
                       htmlFor="username"
                       className="text-left font-small small"
                     >
-
+                      {/* Username */}
                     </label>
                     <br />
                     <input
@@ -87,7 +87,7 @@ export default class Login extends React.Component {
                   <div className="form-group ml-3">
                     <br />
                     <label htmlFor="username" className="text-left small">
-                    
+                      {/* Password */}
                     </label>
                     <br />
                     <input
