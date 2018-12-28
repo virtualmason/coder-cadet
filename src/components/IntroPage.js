@@ -40,6 +40,7 @@ class IntroPage extends Component {
                 <Col>
                   <h1 className='mainColor'>Waiting For The Perfect MERN Dev To Fall From The Sky?</h1>
                   <hr className="style-hr "/>
+                  <p>Mongo | Express | React | Node | Javascript</p>
                 </Col>
               </Row>
           </Container> 
