@@ -61,7 +61,7 @@ class AboutPage extends Component {
                 <img src={node} alt="node logo" style={{height:'200px',
       width: '200px'}}/>
                 <h4 className="mt-3">History</h4>
-              <p>Frustrated with how hard it is for talented US based devs to get an entry level coding jobs, Coder Cadet was born.</p>
+              <p>Frustrated with how hard it is for talented US based devs to get entry level coding jobs, Coder Cadet was born.</p>
               </Roll>
             </Col>
           </Row>   

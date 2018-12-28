@@ -35,7 +35,7 @@ class TypedReact extends Component {
           />
         </div>
         {
-        <Button color="success" onClick={() => this.typed.reset()}>Reset</Button>
+        <Button color="success"  onClick={() => this.typed.reset()}>Reset</Button>
         }
       </div>
     );
