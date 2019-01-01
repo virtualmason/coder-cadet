@@ -8,10 +8,9 @@
 7 verbose lifecycle codercadet@0.1.0~dev: unsafe-perm in lifecycle true
 8 verbose lifecycle codercadet@0.1.0~dev: PATH: /usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/node-gyp-bin:/Users/floydorr/sites/codercadet/node_modules/.bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/floydorr/Library/Android/sdk/tools:/Users/floydorr/Library/Android/sdk/platform-tools:/Users/floydorr/Library/Android/sdk/tools:/Users/floydorr/Library/Android/sdk/platform-tools
 9 verbose lifecycle codercadet@0.1.0~dev: CWD: /Users/floydorr/sites/codercadet
-10 silly lifecycle codercadet@0.1.0~dev: Args: [ '-c',
-10 silly lifecycle   'concurrently "react-scripts start" "nodemon server/server.js"' ]
+10 silly lifecycle codercadet@0.1.0~dev: Args: [ '-c', 'concurrently "nodemon server/server.js" "npm start" ' ]
 11 info lifecycle codercadet@0.1.0~dev: Failed to exec dev script
-12 verbose stack Error: codercadet@0.1.0 dev: `concurrently "react-scripts start" "nodemon server/server.js"`
+12 verbose stack Error: codercadet@0.1.0 dev: `concurrently "nodemon server/server.js" "npm start" `
 12 verbose stack spawn ENOENT
 12 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifecycle/lib/spawn.js:48:18)
 12 verbose stack     at emitTwo (events.js:126:13)
@@ -28,7 +27,7 @@
 20 error code ELIFECYCLE
 21 error errno ENOENT
 22 error syscall spawn
-23 error codercadet@0.1.0 dev: `concurrently "react-scripts start" "nodemon server/server.js"`
+23 error codercadet@0.1.0 dev: `concurrently "nodemon server/server.js" "npm start" `
 23 error spawn ENOENT
 24 error Failed at the codercadet@0.1.0 dev script.
 24 error This is probably not a problem with npm. There is likely additional logging output above.

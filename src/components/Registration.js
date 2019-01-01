@@ -8,7 +8,7 @@ export default class Registration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      username: "",
       password: "",
       resp: ""
     };
@@ -19,12 +19,12 @@ export default class Registration extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    axios.post('https://post-nithin.glitch.me/form', {
-      name: this.state.name,
+    axios.post('/auth/signup', {
+      username: this.state.username,
       password: this.state.password
     })
     .then((response) => {
-      console.log(response.data, "axios");
+      console.log(response.data, "axios response");
       this.setState({
         'resp' : response.data
       });
@@ -36,7 +36,7 @@ export default class Registration extends React.Component {
     });
     
     this.setState({
-     name:  "",
+     username:  "",
      password: "",
     });
   }
@@ -45,7 +45,7 @@ export default class Registration extends React.Component {
     this.setState({ password: e.target.value });
   }
   handleUserInputChange(e) {
-    this.setState({ name: e.target.value });
+    this.setState({ username: e.target.value });
   }
   render() {
     return (
@@ -71,10 +71,10 @@ export default class Registration extends React.Component {
                     </label>
                     <br />
                     <input
-                      id="username"
+                      id="reg-username"
                       name="username"
                       type="text"
-                      value={this.state.name}
+                      value={this.state.username}
                       placeholder="Enter Username"
                       onChange={this.handleUserInputChange}
                     />
@@ -86,12 +86,11 @@ export default class Registration extends React.Component {
                 <section className="col-sm-12 ">
                   <div className="form-group ml-3">
                     <br />
-                    <label htmlFor="username" className="text-left small">
+                    <label htmlFor="password" className="text-left small">
                       {/* Password */}
                     </label>
                     <br />
                     <input
-                      id="password"
                       type="password"
                       placeholder="Enter Password"
                       value={this.state.password}
