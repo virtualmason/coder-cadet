@@ -13,7 +13,8 @@ const MongoStore = require('connect-mongo')(session)
 const dbConnection = require('./db') // loads our connection to the mongo database
 const passport = require('./passport')
 const app = express()
-//const User = require('./db/models/User')//comment this and post to axios works
+const User = require('./db/models/user')//comment this and post to axios works
+console.log(User);
 require('dotenv').config()
 
 const PORT = process.env.PORT || 8080 
