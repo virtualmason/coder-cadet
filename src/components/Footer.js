@@ -6,7 +6,7 @@ export default class Footer extends React.Component {
     return (
       <div className="bg-dark">
         <Nav>
-          {/* <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another Link</NavLink>*/} <NavLink disabled href="#" className="text-center">Copyright &copy; 2018</NavLink> 
+          {/* <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another Link</NavLink>*/} <NavLink disabled href="#" className="text-center">Copyrights &copy; 2018</NavLink> 
         </Nav>
       </div>
     );
