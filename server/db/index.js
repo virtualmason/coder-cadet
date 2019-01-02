@@ -7,7 +7,7 @@ let MONGO_URL
 const MONGO_LOCAL_URL = 'mongodb://localhost/mern-passport'
 //mongodb://localhost/mern-passport
 if (process.env.MONGODB_URI) {
-	mongoose.connect(process.env.MONGODB_URI)
+	mongoose.connect(process.env.MONGODB_URI,{ useNewUrlParser: true })
 	MONGO_URL = process.env.MONGODB_URI
 } else {
 	mongoose.connect(MONGO_LOCAL_URL) // local mongo url

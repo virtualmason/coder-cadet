@@ -13,7 +13,11 @@ const MongoStore = require('connect-mongo')(session)
 const dbConnection = require('./db') // loads our connection to the mongo database
 const passport = require('./passport')
 const app = express()
-//const PORT = process.env.PORT || 3000 //8080
+//const User = require('../db/models/user')
+
+const PORT = process.env.PORT || 8080 
+var cors = require('cors')
+app.use(cors())
 
 // // ===== Middleware ====
 app.use(morgan('dev'))
@@ -70,6 +74,7 @@ if (process.env.NODE_ENV === 'production') {
 
 // /* Express app ROUTING */
 app.use('/auth', require('./auth'))
+//app.use('/', router) //??
 
 // // ====== Error handler ====
 app.use(function(err, req, res, next) {
@@ -78,7 +83,30 @@ app.use(function(err, req, res, next) {
 	res.status(500)
 })
 
+
+app.post('/signup', (req, res) => {
+	const { username, password } = req.body
+	console.log("from server req.body: ", username, password)
+	res.send('love');
+	// ADD VALIDATION
+	// User.findOne({ 'local.username': username }, (err, userMatch) => {
+	// 	if (userMatch) {
+	// 		return res.json({
+	// 			error: `Sorry, already a user with the username: ${username}`
+	// 		})
+	// 	}
+	// 	const newUser = new User({
+	// 		'local.username': username,
+	// 		'local.password': password
+	// 	})
+	// 	newUser.save((err, savedUser) => {
+	// 		if (err) return res.json(err)
+	// 		return res.json(savedUser)
+	// 	})
+//	})
+})
+
 // ==== Starting Server =====
-app.listen( () => {
-	console.log(`App listening on PORT: `)
+app.listen( PORT,() => {
+	console.log(`App listening on PORT: ${PORT}`)
 })

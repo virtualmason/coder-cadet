@@ -19,7 +19,7 @@ export default class Registration extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    axios.post('/auth/signup', {
+    axios.post('http://localhost:8080/signup', {
       username: this.state.username,
       password: this.state.password
     })
