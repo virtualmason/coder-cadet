@@ -16,10 +16,10 @@ export default class Registration extends React.Component {
     this.handleUserInputChange = this.handleUserInputChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
-
+//http://localhost:8080/signup
   handleSubmit(event) {
     event.preventDefault();
-    axios.post('http://localhost:8080/signup', {
+    axios.post('/signup', {
       username: this.state.username,
       password: this.state.password
     })
