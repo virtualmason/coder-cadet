@@ -13,7 +13,8 @@ const MongoStore = require('connect-mongo')(session)
 const dbConnection = require('./db') // loads our connection to the mongo database
 const passport = require('./passport')
 const app = express()
-//const User = require('../db/models/user')
+//const User = require('./db/models/User')//comment this and post to axios works
+require('dotenv').config()
 
 const PORT = process.env.PORT || 8080 
 var cors = require('cors')
@@ -41,26 +42,26 @@ app.use(passport.initialize())
 app.use(passport.session()) // will call the deserializeUser
 
 // // ===== testing middleware =====
-// // app.use(function(req, res, next) {
-// // 	console.log('===== passport user =======')
-// // 	console.log(req.session)
-// // 	console.log(req.user)
-// // 	console.log('===== END =======')
-// // 	next()
-// // })
-// // testing
-// // app.get(
-// // 	'/auth/google/callback',
-// // 	(req, res, next) => {
-// // 		console.log(`req.user: ${req.user}`)
-// // 		console.log('======= /auth/google/callback was called! =====')
-// // 		next()
-// // 	},
-// // 	passport.authenticate('google', { failureRedirect: '/login' }),
-// // 	(req, res) => {
-// // 		res.redirect('/')
-// // 	}
-// // )
+// app.use(function(req, res, next) {
+// 	console.log('===== passport user =======')
+// 	console.log(req.session)
+// 	console.log(req.user)
+// 	console.log('===== END =======')
+// 	next()
+// })
+// testing
+// app.get(
+// 	'/auth/google/callback',
+// 	(req, res, next) => {
+// 		console.log(`req.user: ${req.user}`)
+// 		console.log('======= /auth/google/callback was called! =====')
+// 		next()
+// 	},
+// 	passport.authenticate('google', { failureRedirect: '/login' }),
+// 	(req, res) => {
+// 		res.redirect('/')
+// 	}
+// )
 
 // // ==== if its production environment!
 if (process.env.NODE_ENV === 'production') {
@@ -83,13 +84,14 @@ app.use(function(err, req, res, next) {
 	res.status(500)
 })
 
-
+//1 connect to server
+//2 get signup to add info to database
 app.post('/signup', (req, res) => {
 	const { username, password } = req.body
 	console.log("from server req.body: ", username, password)
-	res.send('love');
-	// ADD VALIDATION
-	// User.findOne({ 'local.username': username }, (err, userMatch) => {
+	res.send(username + " backend is being built");
+	//ADD VALIDATION
+	// User.findOne({ 'local.username': username }, (err, userMatch) =>s {
 	// 	if (userMatch) {
 	// 		return res.json({
 	// 			error: `Sorry, already a user with the username: ${username}`
@@ -103,7 +105,7 @@ app.post('/signup', (req, res) => {
 	// 		if (err) return res.json(err)
 	// 		return res.json(savedUser)
 	// 	})
-//	})
+	// })
 })
 
 // ==== Starting Server =====

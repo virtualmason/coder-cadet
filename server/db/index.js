@@ -1,6 +1,8 @@
 /* Mongo Database
 * - this is where we set up our connection to the mongo database
 */
+require('dotenv').config()
+
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise
 let MONGO_URL
@@ -19,10 +21,13 @@ const db = mongoose.connection
 db.on('error', err => {
 	console.log(`There was an error connecting to the database: ${err}`)
 })
-db.once('open', () => {
+// db.once('open', () => {
+// 	console.log(
+// 		`You have successfully connected to your mongo database: ${MONGO_URL}`
+// 	)
+// })
+db.once('open', function callback () {
 	console.log(
 		`You have successfully connected to your mongo database: ${MONGO_URL}`
-	)
-})
-
+	)  });
 module.exports = db

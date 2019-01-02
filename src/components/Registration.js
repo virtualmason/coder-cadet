@@ -24,12 +24,10 @@ export default class Registration extends React.Component {
       password: this.state.password
     })
     .then((response) => {
-      console.log(response.data, "axios response");
       this.setState({
         'resp' : response.data
       });
 
-      console.log(this.state.resp, 'working reps');
     })
     .catch(function (error) {
       console.log(error);
