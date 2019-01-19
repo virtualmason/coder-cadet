@@ -16,13 +16,14 @@ export default class Registration extends React.Component {
     this.handleUserInputChange = this.handleUserInputChange.bind(this);
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
   }
-//http://localhost:8080/signup
+//signup
   handleSubmit(event) {
     event.preventDefault();
-    axios.post('/signup', {
+    axios.post('http://localhost:3001/signup', {
       username: this.state.username,
-      password: this.state.password
-    })
+      password: this.state.password})
+      // {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+    
     .then((response) => {
       this.setState({
         'resp' : response.data
@@ -46,6 +47,7 @@ export default class Registration extends React.Component {
     this.setState({ username: e.target.value });
   }
   render() {
+
     return (
       <Container id="Login" className='mb-3'>
          <main className="centered">
