@@ -28,14 +28,14 @@ class AboutPage extends Component {
       <div>
         <Container>  
           <h1 className="text-center mt-2"> 
-          <TypedReact
+          {/* <TypedReact
     strings={[
     	'We have a network of talented, motivated entry level software developers.</i>',
       'You get a great dev at low price and a wise investment.',
       'Hire for the long term!',
       'All cadets can code, and are US citizens.',
     ]}
-  />
+  /> */}
          </h1>
           <Row className='App App-header'>
             <Col>

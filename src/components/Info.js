@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.css";
 const Info = () => (
     <React.Fragment>
        <h1>Info Page</h1>
-<Links />
+       <Links />
     </React.Fragment>
 );
 
