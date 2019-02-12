@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Main />
+        <Main auth={this.props.auth} />
        
 
       </div>

@@ -6,7 +6,7 @@ import App from './App';
 import Home from './Home';
 import Callback from './LoggedIn';
 import Auth from '../Auth/Auth';
-import history from './history';
+import history from '../history';
 
 const auth = new Auth();
 
@@ -16,13 +16,13 @@ const handleAuthentication = (nextState, replace) => {
   }
 }
 
-export const makeMainRoutes = () => {
+export default () => {
   return (
     <Router history={history} component={App}>
       <div>
         <Route path="/" render={(props) => <App auth={auth} {...props} />} />
         <Route path="/home" render={(props) => <Home auth={auth} {...props} />} />
-        <Route path="/LoggedIn" render={(props) => {
+        <Route path="/callback" render={(props) => {
           handleAuthentication(props);
           return <Callback {...props} /> 
         }}/>

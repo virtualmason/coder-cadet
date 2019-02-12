@@ -9,8 +9,10 @@ import 'babel-polyfill';
 import Info from './Info'
 class App extends Component {
   render() {
+    const { auth } = this.props;
     return (
       <div>
+        {auth && auth.isAuthenticated() && <h1>Authenticated!</h1>}
         <IntroPage />
         <AboutPage />
         < Registration />
