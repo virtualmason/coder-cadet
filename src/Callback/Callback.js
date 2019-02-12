@@ -15,9 +15,10 @@ class Callback extends Component {
       // right: 0,
       // backgroundColor: 'white',
     }
-
+ const {auth} = this.props;
     return (
       <div style={style}>
+        {auth && auth.isAuthenticated() && <h1>Authenticated!</h1>}
         <p>callback</p>
       </div>
     );

@@ -12,7 +12,7 @@ class App extends Component {
     const { auth } = this.props;
     return (
       <div>
-        {auth && auth.isAuthenticated() && <h1>Authenticated!</h1>}
+        {/* {auth && auth.isAuthenticated() && <h1>Authenticated!</h1>} */}
         <IntroPage />
         <AboutPage />
         < Registration />
