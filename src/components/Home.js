@@ -11,13 +11,16 @@ class App extends Component {
   render() {
     const { auth } = this.props;
     return (
-      <div>
-        {/* {auth && auth.isAuthenticated() && <h1>Authenticated!</h1>} */}
+      <div >
+        { !auth.isAuthenticated() &&(<React.Fragment>
         <IntroPage />
         <AboutPage />
         < Registration />
         {/* <Tabs /> */}
         <Footer />
+        </React.Fragment>
+        )}
+
       </div>
     );
   }

@@ -18,8 +18,12 @@ class Callback extends Component {
  const {auth} = this.props;
     return (
       <div style={style}>
-        {auth && auth.isAuthenticated() && <h1>Authenticated!</h1>}
-        <p>callback</p>
+        
+            {
+              auth.isAuthenticated() && (
+                 <p>authed</p>
+                )
+            }
       </div>
     );
   }
