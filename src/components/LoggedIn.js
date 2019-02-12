@@ -1,31 +1,31 @@
-import React from "react";
-import {  Row,Col, Container } from 'reactstrap';
-import axios from 'axios';
-import Links from './Links';
+// import React from "react";
+// import {  Row,Col, Container } from 'reactstrap';
+// import axios from 'axios';
+// import Links from './Links';
 
-class LoggedIn extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state ={};
-    }
+// class LoggedIn extends React.Component {
+//     constructor(props) {
+//       super(props);
+//       this.state ={};
+//     }
   
-    componentDidMount() {
+//     componentDidMount() {
       
-    }
+//     }
   
-    componentWillUnmount() {
-    }
+//     componentWillUnmount() {
+//     }
     
-    render() {
-      const divStyle = {
-      };
-      return ( 
-        <React.Fragment>
-          <h1>You are Logged In!!!!Yess!!!</h1>
-          <Links />
-      </React.Fragment>
-      );
-    }
-  }
+//     render() {
+//       const divStyle = {
+//       };
+//       return ( 
+//         <React.Fragment>
+//           <h1>You are Logged In!!!!Yess!!!</h1>
+//           <Links />
+//       </React.Fragment>
+//       );
+//     }
+//   }
   
-  export default LoggedIn;
+//   export default LoggedIn;

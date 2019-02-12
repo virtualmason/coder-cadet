@@ -38,9 +38,6 @@ export default class NavBar extends React.Component {
               <NavItem>
               <NavLink href="#Login" style={{color:'#3ba30f'}}>Log In / Register</NavLink>
               </NavItem>
-              {/* <NavItem>
-                <NavLink href="#" style={{color:'#3ba30f'}}>Register</NavLink>
-              </NavItem> */}
             </Nav>
           </Collapse>
         </Navbar>

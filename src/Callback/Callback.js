@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import loading from './loading.svg';
+import {  Row,Col, Container } from 'reactstrap';
 
 class Callback extends Component {
   render() {
@@ -21,8 +22,16 @@ class Callback extends Component {
         
             {
               auth.isAuthenticated() && (
-                 <p>authed</p>
-                )
+               <Container >
+                <Row>
+                  <Col className="text-center">
+                    <h1>You Are Athenticated</h1>
+                    <p>Now let's set you your profile!</p>
+                   </Col>
+                </Row>
+               </Container>     
+ 
+              )
             }
       </div>
     );

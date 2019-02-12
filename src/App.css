@@ -44,6 +44,8 @@ hr.style-hr {
 
 .paratrooper {
   position: absolute;
+  top: 250px;
+  left: 150git add px;
   z-index: 999;
   max-height: 150px;
   min-width: 20px;
