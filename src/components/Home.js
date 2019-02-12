@@ -6,7 +6,7 @@ import Footer from './Footer.js';
 import Registration from './Registration'
 import Tabs from './Tabs.js'
 import 'babel-polyfill';
-import Info from './Info'
+// import Info from './Info'
 class App extends Component {
   render() {
     const { auth } = this.props;
@@ -17,7 +17,6 @@ class App extends Component {
         <AboutPage />
         < Registration />
         {/* <Tabs /> */}
-        <Info />
         <Footer />
       </div>
     );
