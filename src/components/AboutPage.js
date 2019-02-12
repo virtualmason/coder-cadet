@@ -4,9 +4,6 @@ import Roll from 'react-reveal/Roll';
 import react from '../images/react-brands.svg';
 import node from '../images/node-brands.svg';
 import database from '../images/database-solid.svg';
-import TypedReact from './TypedReact.js';
-
- 
 
 class AboutPage extends Component {
   constructor(props) {
@@ -28,14 +25,7 @@ class AboutPage extends Component {
       <div>
         <Container>  
           <h1 className="text-center mt-2"> 
-          <TypedReact
-    strings={[
-    	'We have a network of talented, motivated entry level software developers.</i>',
-      'You get a great dev at low price and a wise investment.',
-      'Hire for the long term!',
-      'All cadets can code, and are US citizens.',
-    ]}
-  />
+            We Make Hiring A Knowledgeable Dev Apprentice Easy!
          </h1>
           <Row className='App App-header'>
             <Col>

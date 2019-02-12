@@ -12,15 +12,15 @@ class IntroPage extends Component {
   }
 
   componentDidMount() {
-    var target = document.querySelector('.paratrooper');
-    var trooper = target.animate([
-    {transform: 'translate(0)'},
-    {transform: 'translate(2000px, 1000px)'}
-    ], 10000);
-    trooper.addEventListener('finish', function() {
-    target.style.transform = 'translate(800px, 800px)';
-    target.style.display='none';
-    });
+    // var target = document.querySelector('.paratrooper');
+    // var trooper = target.animate([
+    // {transform: 'translate(0)'},
+    // {transform: 'translate(2000px, 1000px)'}
+    // ], 10000);
+    // trooper.addEventListener('finish', function() {
+    // target.style.transform = 'translate(800px, 800px)';
+    // target.style.display='none';
+    //});
   }
 
   componentWillUnmount() {
@@ -31,8 +31,9 @@ class IntroPage extends Component {
       backgroundImage: `url(${img})`
     };
     return ( 
+   <Container>
     <div className="overFlow">
-      <img src={ paratrooper } alt="skydive icon" className="paratrooper" /> 
+      <img src={ paratrooper } alt="skydive icon" className="paratrooper img-fluid" /> 
         <NavBar />
           <main className="App-header App" style={divStyle}>
           <Container className="overflow">          
@@ -46,6 +47,7 @@ class IntroPage extends Component {
           </Container> 
           </main> 
       </div>
+    </Container>    
     );
   }
 }
